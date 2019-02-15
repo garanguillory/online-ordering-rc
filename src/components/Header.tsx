@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import * as React from 'react';
+import styled from '../theme';
 import Location from './Location';
 
 const HeaderWrapper = styled.div`
