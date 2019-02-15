@@ -2,7 +2,19 @@ import * as React from 'react';
 import styled from '../theme';
 import Location from './Location';
 
-const HeaderWrapper = styled.div`
+interface HeaderProps {
+	className?: string;
+}
+
+const Header: React.SFC<HeaderProps> = (props) => {
+	return (
+		<div className={props.className}>
+			<Location />
+		</div>
+	);
+};
+
+const StyledHeader = styled(Header)`
 	border-bottom: 4px solid black;
 	display: grid;
 	height: 20vh;
@@ -10,12 +22,4 @@ const HeaderWrapper = styled.div`
 	text-align: center;
 `;
 
-const Header = () => {
-	return (
-		<HeaderWrapper>
-			<Location />
-		</HeaderWrapper>
-	);
-};
-
-export default Header;
+export default StyledHeader;
