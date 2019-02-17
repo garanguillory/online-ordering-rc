@@ -15,14 +15,32 @@ const ReceiptHeader = styled.div`
 	width: 100%;
 `;
 
-const Receipt = () => {
-	return (
-		<ReceiptWrapper>
-			<ReceiptHeader>
-				<h1>Receipt Component</h1>
-			</ReceiptHeader>
-		</ReceiptWrapper>
-	);
+interface ReceiptProps {
+	className?: string;
+	order: Order;
+	updateOrder(order: {}): {};
+}
+
+interface Order {
+	[combo: string]: {
+		price: number,
+		tenders: number,
+		quantity: number
+	}
+}
+
+class Receipt extends React.Component<ReceiptProps> {
+	
+	render(){
+		console.log(this.props);
+		return (
+			<ReceiptWrapper>
+				<ReceiptHeader>
+					<h1>Receipt Component</h1>
+				</ReceiptHeader>
+			</ReceiptWrapper>
+		);
+	}
 };
 
 export default Receipt;

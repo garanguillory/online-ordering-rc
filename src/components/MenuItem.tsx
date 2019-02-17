@@ -11,7 +11,6 @@ interface MenuItemProps {
 	quantity?: number;
 }
 
-
 class MenuItem extends React.Component<MenuItemProps> {
 
 	updateOrder = (update: number) => {
