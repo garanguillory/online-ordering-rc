@@ -5,10 +5,10 @@ import styled from '../theme';
 
 interface MenuItemProps {
 	className?: string;
-	updateOrder?(item: {}, update: number): {};
-	itemName?: string;
-	price?: number;
-	quantity?: number;
+	updateOrder(item: {}, update: number): {};
+	itemName: string;
+	price: number;
+	quantity: number;
 }
 
 class MenuItem extends React.Component<MenuItemProps> {

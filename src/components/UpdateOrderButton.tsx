@@ -1,10 +1,9 @@
 import * as React from 'react';
-import styled from '../theme';
 
 interface UpdateOrderButtonProps {
 	className?: string;
-	updateOrder?(update: number): {};
-  text: string;
+	updateOrder(update: number): {};
+  text?: string;
   update: number;
 }
 

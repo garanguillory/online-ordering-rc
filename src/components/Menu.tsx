@@ -8,7 +8,7 @@ interface MenuProps {
 	updateOrder(order: {}): {};
 }
 
-interface Order {
+export interface Order {
 	[combo: string]: {
 		price: number,
 		tenders: number,
@@ -53,8 +53,8 @@ class Menu extends React.Component<MenuProps> {
 			return <MenuItem 
 							updateOrder={this.updateOrder}
 							itemName={combo} 
-							price={this.props.order[combo].price} 
-							quantity={this.props.order[combo].quantity}
+							price={order[combo].price} 
+							quantity={order[combo].quantity}
 							key={combo} />
 		});
 	}
